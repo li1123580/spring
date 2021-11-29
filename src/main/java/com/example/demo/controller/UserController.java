@@ -33,8 +33,8 @@ public class UserController {
     }
 
     @PostMapping("insert")
-    public void insertUser(@RequestBody User user){
-        userService.save(user);
+    public Boolean insertUser(@RequestBody User user){
+       return userService.save(user);
     }
 
 }

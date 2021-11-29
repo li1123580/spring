@@ -24,4 +24,5 @@ public interface UserService extends IService<User> {
     User queryById(Integer id);
 
 
+
 }
