@@ -32,4 +32,9 @@ public class UserController {
         return this.userService.queryById(id);
     }
 
+    @PostMapping("insert")
+    public void insertUser(@RequestBody User user){
+        userService.save(user);
+    }
+
 }

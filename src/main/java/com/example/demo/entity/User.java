@@ -1,5 +1,10 @@
 package com.example.demo.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -8,9 +13,11 @@ import java.io.Serializable;
  * @author makejava
  * @since 2021-01-07 15:31:20
  */
+@TableName("user")
+@Data
 public class User implements Serializable {
     private static final long serialVersionUID = 776803023303662255L;
-    
+    @TableId(type = IdType.AUTO)
     private Integer id;
     
     private String username;
@@ -22,54 +29,5 @@ public class User implements Serializable {
     private String address;
     
     private String password;
-
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public Object getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(Object birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
 }
